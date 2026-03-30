@@ -3,3 +3,110 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Orbit spin animations */
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counter-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbit-spin 4s linear infinite;
+}
+
+.animate-orbit-slow {
+  animation: orbit-spin 8s linear infinite;
+}
+
+.animate-counter {
+  animation: counter-spin 4s linear infinite;
+}
+
+/* Keep the dot upright as the ring spins */
+.orbit-dot {
+  animation: counter-spin 4s linear infinite;
+}
+
+.orbit-dot-slow {
+  animation: counter-spin 8s linear infinite;
+}
+
+/* Floating icons */
+@keyframes float-y {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+@keyframes float-y-rev {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(18px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow-rev {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.icon-float {
+  animation: float-y 3s ease-in-out infinite;
+}
+
+.icon-float-rev {
+  animation: float-y-rev 3.5s ease-in-out infinite;
+}
+
+.icon-float-slow {
+  animation: float-y 5s ease-in-out infinite;
+}
+
+.icon-spin {
+  animation: spin-slow 6s linear infinite;
+}
+
+.icon-spin-rev {
+  animation: spin-slow-rev 8s linear infinite;
+}
