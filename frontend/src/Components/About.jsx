@@ -41,11 +41,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-white via-blue-50 to-white dark:from-black dark:via-gray-950 dark:to-black text-black dark:text-white">
+    <section id="about" className="py-12 sm:py-16 bg-gradient-to-br from-white via-blue-50 to-white dark:from-black dark:via-gray-950 dark:to-black text-black dark:text-white">
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
 
-        <h2 className="text-4xl md:text-6xl font-bold mb-10">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
           Solving real problems with{' '}
           <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             user-first thinking
@@ -53,42 +53,51 @@ const About = () => {
         </h2>
 
         {/* Stats */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-14">
           {stats.map((stat, idx) => (
-            <div key={idx} className="p-6 text-center bg-white dark:bg-gray-900 rounded-xl shadow hover:scale-105 transition">
-              <div className="text-3xl">{stat.icon}</div>
-              <h3 className="text-2xl font-bold">{stat.number}</h3>
-              <p>{stat.label}</p>
+            <div key={idx} className="p-4 sm:p-6 text-center bg-white dark:bg-gray-900 rounded-lg shadow hover:scale-105 transition">
+              <div className="text-2xl sm:text-3xl">{stat.icon}</div>
+              <h3 className="text-xl sm:text-2xl font-bold mt-1">{stat.number}</h3>
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">{stat.label}</p>
             </div>
           ))}
         </div>
 
         {/* Services */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-12">
           {services.map((service, idx) => (
             <div
               key={idx}
               onClick={() => setActiveIndex(activeIndex === idx ? -1 : idx)}
-              className={`p-6 rounded-xl cursor-pointer transition ${
+              className={`p-4 sm:p-6 rounded-lg cursor-pointer transition ${
                 activeIndex === idx
-                  ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white'
-                  : 'bg-white dark:bg-gray-900 border'
+                  ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg'
+                  : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700'
               }`}
             >
-              <div className="text-4xl">{service.icon}</div>
-              <h4 className="text-xl font-bold mt-2">{service.title}</h4>
-              <p className="text-sm mt-2">{service.description}</p>
+              <div className="text-3xl sm:text-4xl">{service.icon}</div>
+              <h4 className="text-base sm:text-lg font-bold mt-2">{service.title}</h4>
+              <p className="text-xs sm:text-sm mt-2 leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>
 
         {/* Tech Stack */}
-        <div className="mt-16 overflow-hidden">
+        <div className="mt-10 sm:mt-14 overflow-hidden">
+          <style>{`
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+              animation: marquee 30s linear infinite;
+            }
+          `}</style>
           <div className="flex animate-marquee">
             {[...technologies, ...technologies].map((tech, idx) => (
               <div
                 key={idx}
-                className={`px-6 py-3 mx-2 bg-gradient-to-br ${tech.color} rounded-lg text-white font-bold`}
+                className={`px-3 sm:px-4 py-2 mx-1 sm:mx-2 bg-gradient-to-br ${tech.color} rounded-lg text-white font-semibold text-xs sm:text-sm whitespace-nowrap`}
               >
                 {tech.name}
               </div>
