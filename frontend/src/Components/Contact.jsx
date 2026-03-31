@@ -142,8 +142,8 @@ const Contact = () => {
                 <textarea 
                   id="message" 
                   name="message" 
-                  rows=\"4\"
-                  maxLength=\"500\"
+                  rows="4"
+                  maxLength="500"
                   value={formData.message}
                   onChange={handleChange}
                   className={`w-full px-3 sm:px-4 py-2 sm:py-3 border-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-black dark:text-white font-medium transition-all duration-300 focus:outline-none resize-none text-sm ${
