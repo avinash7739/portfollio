@@ -65,31 +65,31 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-950 dark:to-black text-black dark:text-white transition-colors duration-300">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-950 dark:to-black text-black dark:text-white transition-colors duration-300">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Get In Touch</h2>
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Have a question or want to work together? I'd love to hear from you. Drop me a message!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
           {/* Contact Form */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur-lg opacity-30"></div>
-            <form onSubmit={handleSubmit} className="relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-2xl space-y-6">
+            <form onSubmit={handleSubmit} className="relative bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-2xl space-y-4 sm:space-y-6">
               {/* Success Message */}
               {submitted && (
-                <div className="p-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-lg font-semibold animate-bounce">
+                <div className="p-3 sm:p-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-lg font-semibold text-sm sm:text-base animate-bounce">
                   ✅ Thanks! Your message has been sent successfully!
                 </div>
               )}
 
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="name" className="block text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                   Full Name *
                 </label>
                 <input 
@@ -98,19 +98,19 @@ const Contact = () => {
                   name="name" 
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-black dark:text-white font-medium transition-all duration-300 focus:outline-none ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-black dark:text-white font-medium transition-all duration-300 focus:outline-none text-sm ${
                     errors.name 
                       ? 'border-red-500 focus:ring-2 focus:ring-red-500' 
                       : 'border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/50'
                   }`}
                   placeholder="Your name"
                 />
-                {errors.name && <p className="text-red-500 text-sm mt-1 font-semibold">ℹ️ {errors.name}</p>}
+                {errors.name && <p className="text-red-500 text-xs sm:text-sm mt-1 font-semibold">ℹ️ {errors.name}</p>}
               </div>
 
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                   Email Address *
                 </label>
                 <input 
@@ -119,20 +119,20 @@ const Contact = () => {
                   name="avinash kumar patel" 
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-black dark:text-white font-medium transition-all duration-300 focus:outline-none ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-black dark:text-white font-medium transition-all duration-300 focus:outline-none text-sm ${
                     errors.email 
                       ? 'border-red-500 focus:ring-2 focus:ring-red-500' 
                       : 'border-gray-300 dark:border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50'
                   }`}
                   placeholder="your@email.com"
                 />
-                {errors.email && <p className="text-red-500 text-sm mt-1 font-semibold">ℹ️ {errors.email}</p>}
+                {errors.email && <p className="text-red-500 text-xs sm:text-sm mt-1 font-semibold">ℹ️ {errors.email}</p>}
               </div>
 
               {/* Message Field */}
               <div>
-                <div className="flex justify-between items-center mb-2">
-                  <label htmlFor="message" className="block text-sm font-bold text-gray-700 dark:text-gray-300">
+                <div className="flex justify-between items-center mb-1 sm:mb-2">
+                  <label htmlFor="message" className="block text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300">
                     Message *
                   </label>
                   <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">
@@ -142,24 +142,24 @@ const Contact = () => {
                 <textarea 
                   id="message" 
                   name="message" 
-                  rows="5"
-                  maxLength="500"
+                  rows=\"4\"
+                  maxLength=\"500\"
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-black dark:text-white font-medium transition-all duration-300 focus:outline-none resize-none ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-black dark:text-white font-medium transition-all duration-300 focus:outline-none resize-none text-sm ${
                     errors.message 
                       ? 'border-red-500 focus:ring-2 focus:ring-red-500' 
                       : 'border-gray-300 dark:border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-500/50'
                   }`}
                   placeholder="Your message here..."
                 ></textarea>
-                {errors.message && <p className="text-red-500 text-sm mt-1 font-semibold">ℹ️ {errors.message}</p>}
+                {errors.message && <p className="text-red-500 text-xs sm:text-sm mt-1 font-semibold">ℹ️ {errors.message}</p>}
               </div>
 
               {/* Submit Button */}
               <button 
                 type="submit" 
-                className="w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="w-full py-2 sm:py-3 px-4 sm:px-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-sm sm:text-base rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Send Message 🚀
               </button>

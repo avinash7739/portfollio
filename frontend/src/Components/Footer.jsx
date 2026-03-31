@@ -47,36 +47,36 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-black dark:via-gray-950 dark:to-black text-white transition-colors duration-300 relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
 
-      <div className="container mx-auto px-4 py-16 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 relative z-10">
         {/* Footer Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Brand Section */}
           <div>
-            <div className="text-4xl font-bold tracking-widest mb-4">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest mb-3 sm:mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Avinash
               </span>
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
               Full-stack developer crafting beautiful and scalable digital solutions. Let's build something amazing together!
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <span className="w-8 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></span>
+            <h4 className="text-base sm:text-lg font-bold mb-4 sm:mb-6 flex items-center gap-2">
+              <span className="w-6 sm:w-8 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></span>
               Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {quickLinks.map((link, idx) => (
                 <li key={idx}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2 font-medium"
+                    className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2 font-medium text-sm sm:text-base"
                   >
                     <span className="w-1.5 h-1.5 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-block"></span>
                     {link.label}
@@ -88,16 +88,16 @@ const Footer = () => {
 
           {/* Newsletter/Contact CTA */}
           <div>
-            <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <span className="w-8 h-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full"></span>
+            <h4 className="text-base sm:text-lg font-bold mb-4 sm:mb-6 flex items-center gap-2">
+              <span className="w-6 sm:w-8 h-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full"></span>
               Get In Touch
             </h4>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4">
               Have a project in mind? Let's connect and create something incredible!
             </p>
             <a
               href="mailto:avinashpatel773911@gmail.com"
-              className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold text-xs sm:text-sm rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
             >
               📧 Send Email
             </a>
@@ -105,45 +105,45 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-12"></div>
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-8 sm:mb-12"></div>
 
         {/* Social Links Section */}
-        <div className="mb-12">
-          <h4 className="text-center text-lg font-bold mb-8 flex items-center justify-center gap-2">
-            <span className="w-8 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></span>
+        <div className="mb-8 sm:mb-12">
+          <h4 className="text-center text-base sm:text-lg font-bold mb-6 sm:mb-8 flex items-center justify-center gap-2">
+            <span className="w-6 sm:w-8 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></span>
             Connect With Me
-            <span className="w-8 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></span>
+            <span className="w-6 sm:w-8 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></span>
           </h4>
-          <div className="flex justify-center gap-4 flex-wrap">
+          <div className="flex justify-center gap-2 sm:gap-4 flex-wrap">
             {socialLinks.map((social, idx) => (
               <a
                 key={idx}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-4 rounded-xl bg-gradient-to-br ${social.color} hover:shadow-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 group text-white`}
+                className={`p-2.5 sm:p-4 rounded-xl bg-gradient-to-br ${social.color} hover:shadow-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 group text-white`}
                 title={social.label}
               >
-                <div className="w-6 h-6 group-hover:scale-125 transition-transform duration-300" dangerouslySetInnerHTML={{ __html: social.svg }} />
+                <div className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-125 transition-transform duration-300" dangerouslySetInnerHTML={{ __html: social.svg }} />
               </a>
             ))}
           </div>
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-8"></div>
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-6 sm:mb-8"></div>
 
         {/* Footer Bottom */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm text-center sm:text-left">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
+          <p className="text-gray-400 text-xs sm:text-sm">
             © {currentYear} <span className="text-white font-semibold">Avinash</span>. All rights reserved.
           </p>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-xs sm:text-sm">
             Designed & Built with <span className="text-red-500">❤️</span> using React & Tailwind CSS
           </p>
           <a
             href="#hero"
-            className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-1 text-sm font-semibold"
+            className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-1 text-xs sm:text-sm font-semibold"
           >
             Back to Top ⬆️
           </a>

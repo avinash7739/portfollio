@@ -11,12 +11,12 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-950 text-black dark:text-white transition-colors duration-300">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4">Skills</h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 via-blue-400 to-purple-400 mx-auto mb-10 rounded-full"></div>
+    <section id="skills" className="py-16 sm:py-20 bg-gray-50 dark:bg-gray-950 text-black dark:text-white transition-colors duration-300">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-3 sm:mb-4">Skills</h2>
+        <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-yellow-400 via-blue-400 to-purple-400 mx-auto mb-8 sm:mb-10 rounded-full"></div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {skills.map((skill, index) => (
             <div key={index} className="group">
               <div className={`bg-gradient-to-br ${skill.color} p-0.5 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105`}>

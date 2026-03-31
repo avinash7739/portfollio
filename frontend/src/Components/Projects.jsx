@@ -29,17 +29,17 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-950 text-black dark:text-white transition-colors duration-300">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10">My Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="projects" className="py-16 sm:py-20 bg-white dark:bg-gray-950 text-black dark:text-white transition-colors duration-300">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-10">My Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <a key={index} href={project.link} className="block group">
               <div className={`${project.bgColor} rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer h-full transform hover:scale-105 hover:-translate-y-2`}>
                 {/* Color Badge */}
                 <div className={`h-2 bg-gradient-to-r ${project.color}`}></div>
                 
-                <img src={project.image} alt={project.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                <img src={project.image} alt={project.title} className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
                 
                 <div className="p-6">
                   <div className={`inline-block bg-gradient-to-r ${project.color} text-white px-3 py-1 rounded-full text-sm font-semibold mb-3`}>

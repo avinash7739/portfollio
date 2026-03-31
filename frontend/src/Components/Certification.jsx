@@ -50,20 +50,20 @@ const Certification = () => {
 
     return (
         <section id="certification" className="py-20 bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-300">
-            <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center mb-4">Certifications</h2>
-                <div className="w-32 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 mx-auto mb-16 rounded-full"></div>
+            <div className="container mx-auto px-4 sm:px-6">
+                <h2 className="text-3xl sm:text-4xl font-bold text-center mb-3 sm:mb-4">Certifications</h2>
+                <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 mx-auto mb-12 sm:mb-16 rounded-full"></div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
                     {certifications.map((cert) => (
                         <div key={cert.id} className="group w-full max-w-sm">
                             <div className={`bg-gradient-to-br ${cert.gradient} p-1 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2 h-full flex flex-col`}>
                                 <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl h-full flex flex-col items-center gap-6">
 
                                     {/* Certificate Icon / Image Placeholder */}
-                                    <div className="w-32 h-32 flex-shrink-0 bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-lg flex items-center justify-center border-4 border-white dark:border-gray-700 shadow-inner overflow-hidden relative">
+                                    <div className="w-24 sm:w-32 h-24 sm:h-32 flex-shrink-0 bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-lg flex items-center justify-center border-4 border-white dark:border-gray-700 shadow-inner overflow-hidden relative">
                                         <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 group-hover:scale-110 transition-transform duration-300">
-                                            <svg className={`w-12 h-12 mb-2 ${cert.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <svg className={`w-8 sm:w-12 h-8 sm:h-12 mb-1 sm:mb-2 ${cert.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                                             </svg>
                                             <span className="text-xs font-semibold px-2 text-center text-gray-400">Placeholder</span>
@@ -72,14 +72,14 @@ const Certification = () => {
 
                                     {/* Certificate Details */}
                                     <div className="text-center flex-1 flex flex-col">
-                                        <h3 className={`text-xl font-bold mb-2 bg-gradient-to-r ${cert.gradient} bg-clip-text text-transparent`}>
+                                        <h3 className={`text-base sm:text-xl font-bold mb-1 sm:mb-2 bg-gradient-to-r ${cert.gradient} bg-clip-text text-transparent`}>
                                             {cert.title}
                                         </h3>
-                                        <h4 className="text-md font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                                        <h4 className="text-sm sm:text-md font-semibold text-gray-700 dark:text-gray-300 mb-3 sm:mb-4">
                                             {cert.issuer}
                                         </h4>
 
-                                        <div className="space-y-2 mb-6 text-sm text-gray-600 dark:text-gray-400 flex-1">
+                                        <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
                                             <p className="flex items-center justify-center gap-2">
                                                 <svg className="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
@@ -95,9 +95,9 @@ const Certification = () => {
                                         </div>
 
                                         {/* View Certificate Button */}
-                                        <a href={cert.pdfLink} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-gradient-to-r ${cert.gradient} text-white font-semibold rounded-lg shadow-md ${cert.buttonHover} transition-all duration-300 transform hover:scale-105 w-full`}>
+                                        <a href={cert.pdfLink} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r ${cert.gradient} text-white font-semibold text-xs sm:text-sm rounded-lg shadow-md ${cert.buttonHover} transition-all duration-300 transform hover:scale-105 w-full`}>
                                             View Certificate
-                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                             </svg>
                                         </a>

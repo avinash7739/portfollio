@@ -27,10 +27,10 @@ const Navbar = () => {
       shadow-xl dark:shadow-purple-500/20 transition-all duration-300
       before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/10 before:via-white/5 before:to-white/10 before:pointer-events-none">
 
-      <div className="container mx-auto flex justify-between items-center px-6 py-4 relative z-10">
+      <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 py-3 sm:py-4 relative z-10">
 
         {/* Logo */}
-        <div className="text-4xl font-bold tracking-widest 
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest 
           text-white 
           hover:text-yellow-200 transition duration-300 cursor-pointer
           hover:scale-110 transform transition-all">
@@ -38,8 +38,8 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
-          <ul className="flex space-x-8 font-bold text-lg text-white">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <ul className="flex space-x-6 lg:space-x-8 font-bold text-sm lg:text-lg text-white">
             <li>
               <a href="#hero"
                 className="relative group text-white hover:text-yellow-200 transition duration-300">
